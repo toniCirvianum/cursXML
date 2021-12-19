@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="catalan">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; UTF-8">
+        <META NAME="DC.Language" SCHEME="RFC1766" CONTENT="Catalan">
+        <META NAME="AUTHOR" CONTENT="Toni Fernandez">
+        <META NAME="REPLY-TO" CONTENT="tfernan8@xtec.cat">
+        <LINK REV="made" href="mailto:tfernan8@xtec.cat">
+        <META NAME="description" CONTENT="Portfoli de la tasca realitzada durant el curs XML i llenguatge de marques">
+        <META NAME="KEYWORDS" CONTENT="XML,json,csv,llenguatge de marques,portfoli,DAW,SMX,HTML,metadades,informàtica,CSS,dades obertes,metaetiquetes,tutorial">
+        <META NAME="Resource-type" CONTENT="Document">
+        <META NAME="DateCreated" CONTENT="Wed, 7 July 2021 00:00:00 GMT+1">
+        <META NAME="Revisit-after" CONTENT="1 days">
+        <META NAME="robots" content="ALL">
+        <meta property="og:image" content="img/favicon.png">
+        <meta property="og:description" content="Portfoli de la tasca realitzada durant el curs XML i llenguatge de marques. Realitzat per Toni Fernandez">
+        <meta property="og:title" content="Curs XML i llenguatge de marques">
+        <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css">
+        <link rel="stylesheet" href="css/cookies.css">
+        <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+        <script type="text/javascript" src="js/cookies.js"></script>
+        <title>Curs XML i llenguatge de marques</title>
+      </head>
+  <body>
+    <header>
+      <nav id="navbar">
+        <div class="container">
+          <h1 class="logo"><a href="index.php">Curs XML</a></h1>
+          <ul id="main-nav" class="txt-btn">
+            <li><a class="current" href="index.php">Inici</a></li>
+            <li><a href="contact.html">Contacte</a></li>
+          </ul>
+        </div>
+      </nav>
+  
+      <div id="showcase-home">
+        <div class="showcase-banner">
+          <h1 class="subpage">Web Responsive</h1>
+          <p class="large">Portfoli HTML i CSS mobile</p>
+        </div>
+      </div>
+  
+    </header>
+  
+  <section class="single-project">
+    <div class="container">
+      <div class="box-portfolio">
+        <img src="img/quadre_responsive.png" alt="quadre portfoli 8">
+        
+        <h4>Web Responsive</h4>
+        <p>Per fer la web responsive s'ha creat una fulla d'estils CSS que es carrega quan la pantalla fa menys de 768px.</p>
+        <p>El que fa la fulla d'estils es convertir els menús, de horitzontal passa a vertical i també fa el mateix amb la disposición 
+          dels quadrats. </p>
+        <img src="img/web_responsive01.png.png" alt="Web responsive">   
+        <br>
+        <h4>Codi del CSS Mobile</h4>
+        <br>
+      <!-- Text area 1-->       
+        
+        <textarea id="codihtml" name="codihtml" rows="20" cols="60">
+/* Navbar */
+#navbar .logo {
+  float: none;
+  text-align: center;
+}
+
+#navbar ul,
+#navbar ul li {
+  float: none;
+}
+
+#navbar ul li a {
+  padding: 5px;
+}
+
+/* Showcase */
+#showcase-home {
+  height: 30vh;
+  padding: 10px;
+}
+
+#showcase .showcase-banner,
+#showcase-home .showcase-banner {
+  /* background: var(--secondary-color); */
+  height: 100%;
+  width: 80%;
+}
+
+#showcase h1,
+#showcase-home h1 {
+  font-size: 30px;
+  line-height: 1em;
+  padding: 10px;
+}
+
+#showcase p,
+#showcase-home p {
+  font-size: 18px;
+}
+
+/* Portfolio */
+#portfolio .portfolio-nav ul li a {
+  display: block;
+}
+
+.box {
+  float: none;
+  width: 100%;
+  padding: 10px;
+}
+
+/* Contact */
+#contact {
+  height: 100%;
+}
+
+#contact .box-contact-features {
+  float: none;
+  width: 100%;
+}
+
+#contact .features-contact .box-form {
+  float: none;
+  width: 100%;
+}
+
+/* Single Project */
+.box-portfolio {
+  float: none;
+  width: 100%;
+}
+
+/* Footer */
+#main-footer {
+  text-align: center;
+}
+
+#main-footer p,
+#main-footer ul,
+#main-footer ul li {
+  float: none;
+}
+          
+           
+        </textarea>
+      <!-- Fi de Text area 1-->
+        <br>
+        <a class="btn btn-light"
+        href="css/mobile.css" target="_blank">Baixa Codi CSS </a>
+      </div>
+      
+      <div class="box-portfolio">
+        <h4>Disseny del portfoli</h4>
+        <p>Per al disseny del portfoli s'ha partit d'una plantilla amb un disseny de quadricula per afegir les diferents activitats del portfoli.
+          Al clicar a cada quadre s'accedeix a una plantilla on es mostra informació en format de dues columnes.
+        </p>
+        <img src="img/mockup.png" alt="Fitxa de la recepta">
+        <h4>RGPD</h4>
+        <p>Quan es carrega la web, apareix el banner de la RGPD amb un botó per acceptar les cookies. </p>
+        <img src="img/cookies1.png" alt="cookies1">
+        <p>Quan es clica a l'enllaç senyalat amb la fletxa de color vermell t'envia a la web per poder llegir els diferents textos del RGPD.</p>
+        <img src="img/cookies2.png" alt="cookies2">
+        <br>
+        <a class="btn btn-light"
+        href="cookies.html" target="_blank">Textos RGPD </a>
+      </div>
+    </div>
+      <div class="single-project-btn">
+        <div class="container">
+          <div class="hr-small"></div>
+          <div class="prev">
+            <a href="portfolio-7.html" class="btn btn-light" >Anterior</a>
+          </div>
+          <div class="next">
+            <a href="portfolio-9.html" class="btn btn-light">Següent</a>
+          </div>
+          <div class="hr-small-2"></div>
+        </div>
+      </div>
+  </section>
+
+  <hr>
+
+  <footer id="main-footer">
+    <div class="container">
+      <p class="small">Toni Fernandez 2021 &copy;</p>
+      <!-- <div class="social"> -->
+        <ul>
+          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+      <!-- </div> -->
+    </div>
+  </footer>
+
+</body>
+</html>

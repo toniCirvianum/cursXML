@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="catalan">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; UTF-8">
+    <META NAME="DC.Language" SCHEME="RFC1766" CONTENT="Catalan">
+    <META NAME="AUTHOR" CONTENT="Toni Fernandez">
+    <META NAME="REPLY-TO" CONTENT="tfernan8@xtec.cat">
+    <LINK REV="made" href="mailto:tfernan8@xtec.cat">
+    <META NAME="description" CONTENT="Portfoli de la tasca realitzada durant el curs XML i llenguatge de marques">
+    <META NAME="KEYWORDS" CONTENT="XML,json,csv,llenguatge de marques,portfoli,DAW,SMX,HTML,metadades,informàtica,CSS,dades obertes,etiquetes">
+    <META NAME="Resource-type" CONTENT="Document">
+    <META NAME="DateCreated" CONTENT="Wed, 7 July 2021 00:00:00 GMT+1">
+    <META NAME="Revisit-after" CONTENT="1 days">
+    <META NAME="robots" content="ALL">
+    <meta property="og:image" content="img/favicon.png">
+    <meta property="og:description" content="Portfoli de la tasca realitzada durant el curs XML i llenguatge de marques. Realitzat per Toni Fernandez">
+    <meta property="og:title" content="Curs XML i llenguatge de marques">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css">
+    <link rel="stylesheet" href="css/cookies.css">
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="js/cookies.js"></script>
+    <title>Curs XML i llenguatge de marques</title>
+  </head>
+  <body>
+    <header>
+      <nav id="navbar">
+        <div class="container">
+          <h1 class="logo"><a href="index.php">Curs XML</a></h1>
+          <ul id="main-nav" class="txt-btn">
+            <li><a class="current" href="index.php">Inici</a></li>
+            <li><a href="contact.html">Contacte</a></li>
+          </ul>
+        </div>
+      </nav>
+  
+      <div id="showcase-home">
+        <div class="showcase-banner">
+          <h1 class="subpage">jsfiddle</h1>
+          <p class="large">Widget onli per testejar codi</p>
+        </div>
+      </div>
+  
+    </header>
+  
+  <section class="single-project">
+    <div class="container">
+      <div class="box-portfolio">
+        <img src="img/jsfidlle.png" alt="quadre portfoli 1">
+        <h4>Js fiddle</h4>
+        <p><a class="link" href="https://jsfiddle.net/" target="_blank" alt="jsfidlle">Jsfiddle</a> és una eina online que permet editar codi HTML, 
+          Javascript i CSS i visualitzar el resultat. Es gratuïta i si estàs registrat pots desar el teus pettis projectes. 
+          També té un mode per treballar col·laborativament.<br> 
+          <h4>Consulta a una base de dades Covid 19</h4>
+          <p>A través del següent enllça de <a class="link" href="https://jsfiddle.net/tfernan8/n8fdcwp6/" target="_blank" alt="jsfiddle">Jsfiddle</a> s'accedeix al codi per consultar la base de dades Covid19 dels centres docents de Catalunya.<br>
+             El programa demana el codi de centre i la data per fer la consulta i retorna dades del centre com el nom, els grups confinats, el num d'alumens i de docents confinats.... <br>
+             <img src="img/jsfidle_codi.png" alt="exemple codi jsfiddle"> </p>
+      </div>
+      <div class="box-portfolio">
+        
+        <h4>Codi HTML</h4>
+        <p> A continuació pots visulaitzar el codi html que fa la consulta a la base de dades covid</p>   
+<!-- Coemnça un textarea per això no esta tabulat-->        
+        <textarea id="codihtml" name="codihtml" rows="50" cols="65">
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Fitxa Productes</title>
+<script src="http://code.jquery.com/jquery-1.5.2.min.js"></script>
+</head>
+<body>
+
+<div id="salida">Nom del centre </div>
+<div id="dadescovid">Dades del Covid19 en un centre educatiu</div>
+
+
+</body>
+<script>
+// Informació del dataset de dades obertes sobre Covid19 als centres educatius de Catalunya 
+// https://analisi.transparenciacatalunya.cat/Educaci-/Dades-COVID-19-als-centres-educatius/fk8v-uqfv 
+
+/*
+// Si  volem entrar els parametres dins la url 
+var queryString = window.location.search;
+var urlParams = new URLSearchParams(queryString);
+var codiCentre = urlParams.get('codicentre');
+var data = urlParams.get('data');
+*/
+
+
+// Si volem emprar una finestre d'entrada dels parametres 
+
+
+
+/*var centre = prompt("indica codi centre (ha de tenir 8 dígits)","08000013");*/
+
+do {
+  var centre = prompt("indica codi centre (ha de tenir 8 dígits)","8000013");
+}
+while (centre.length != 8) 
+var data = prompt("Indica data","aaaa-mm-dd"); 
+
+
+data = data + "T00:00:00.000"; 
+
+
+var adresa = "https://analisi.transparenciacatalunya.cat/resource/fk8v-uqfv.json?codcentre=" + centre +"&datageneracio=" + data ; 
+//alert(adresa); 
+var adresa2 ="https://analisi.transparenciacatalunya.cat/resource/3u9c-b74b.json?codi_centre=" + centre ;
+//alert(adresa2); 
+$(document).ready(function() {
+      $.ajax({
+          url: adresa2 ,
+          type: 'GET',
+          dataType: 'JSON',
+          success: function (data) {
+              var info = "";
+              for (var c = 0; c < data.length; c++) {
+                  var info = info + "Nom del centre : " + data[c].denominaci_completa + "<br />";
+                  var info = info + "Població : " + data[c].nom_municipi + "<br />";
+                  var info = info + "Tipus de centre : " + data[c].nom_naturalesa + "<br />";
+                  
+              }
+                $("#salida").html(info);
+          }
+      })
+        
+  })
+
+$(document).ready(function() {
+      $.ajax({
+          url: adresa ,
+          type: 'GET',
+          dataType: 'JSON',
+          success: function (datacovid) {
+              var info = "";
+              for (var c = 0; c < datacovid.length; c++) {
+                  var info = info + "Estat del centre : " + datacovid[c].estat + "<br />";
+                  var info = info + "Data  : " +datacovid[c].datacreacio + " <br />";
+                  var info = info + "Grups confinats: " + datacovid[c].grup_confin + "<br />"; 
+                  var info = info + "Alumnes confinats : "+ datacovid[c].alumn_confin + "<br />";
+                  var info = info + "Docents confinats : "+ datacovid[c].docent_confin + "<br />"; 
+                  
+              }
+                $("#dadescovid").html(info);
+          }
+      })
+        
+  })
+
+</script>
+</html>                 
+          </textarea>
+          <!-- Acaba el tetx area -->
+        <br>
+        <a class="btn btn-light" href="https://drive.google.com/file/d/1LYaMw-BxMrk08ZbMclC55ZV-eYxHEmKh/view">Codi HTML</a>
+      </div>
+    </div>
+      <div class="single-project-btn">
+        <div class="container">
+          <div class="hr-small"></div>
+          <!-- <div class="prev">
+            <a href="#" class="btn btn-light">Prev</a>
+          </div> -->
+          <div class="next">
+            <a href="portfolio-2.html" class="btn btn-light">Següent</a>
+          </div>
+          <div class="hr-small-2"></div>
+        </div>
+      </div>
+  </section>
+
+  <hr>
+
+  <footer id="main-footer">
+    <div class="container">
+      <p class="small">Toni Fernandez 2021 &copy;</p>
+      <!-- <div class="social"> -->
+        <ul>
+          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+      <!-- </div> -->
+    </div>
+  </footer>
+
+</body>
+</html>

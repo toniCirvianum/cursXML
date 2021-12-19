@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Fitxa Productes</title>
+<script src="http://code.jquery.com/jquery-1.5.2.min.js"></script>
+<style type="text/css">
+#llista {
+width: 600px; 
+alignment-baseline: left; 
+margin: 10px;
+}
+#fitxa {
+width: 600px;
+height: 300px;
+margin : auto;
+align-content: left; 
+}
+
+#esquerra {
+float: left; 
+width: 250px; 
+height: 100%; 
+}
+
+#dreta {
+float: right;
+width: 350px;
+height: 100%; 
+text-align: left;
+
+}
+
+.foto {
+width:  140px; 
+height:  100px;
+transition: transform 0.5s; 
+}
+
+.foto:hover{
+transform: scale(1.5);
+}
+
+.barres {
+width: 150px; 
+}
+
+.titol {
+text-align: center; 
+font-weight: bold; 
+background-color: #cccccc; 
+}
+</style>
+</head>
+
+<body>
+<div id="llista" >
+</div>
+</body>
+
+<script type="text/javascript" >
+var producte ="" ;
+
+jQuery(document).ready(function(){
+//var url = "http://www.webservicestest.tk/temes/unitat0/dades_xml_productes.xml"; 
+var url = "productesXML_ToniFernandez.xml"; 
+//alert("Font de dades " + url);
+$.ajax({
+type: "GET",
+crossDomain: true,
+url: url ,
+dataType: "xml",
+success: function(xml) {
+
+$(xml).find('producte').each(function(){
+//var v_codi_barres = $(this).attr('codi_barres'); 
+var v_codi_barres = $(this).find('codi_barres').text();
+var v_productor = $(this).find('productor').text() ; 
+var v_categoria = $(this).find('categoria').text() ; 
+var v_nom_producte = $(this).find('nom_producte').text() ; 
+var v_descri = $(this).find('descri').text() ; 
+var v_preu = $(this).find('preu').text() ; 
+var v_stock = $(this).find('stock').text() ; 
+var v_foto = $(this).find('foto').text() ; 
+var url_codi_barres = "https://barcode.tec-it.com/barcode.ashx?data=" + v_codi_barres + "&code=EAN13&translate-esc=on"; 
+//var url_codi_barres ="https://barcode.tec-it.com/barcode.ashx?data="+v_codi_barres+ "&code=&multiplebarcodes=false&translate-esc=false&unit=Fit&dpi=96&imagetype=Gif&rotation=0&color=%23000000&bgcolor=%23ffffff&codepage=Default&qunit=Mm&quiet=0&hidehrt=False";
+producte += '<div class="titol" >' + v_nom_producte + ' </div>'; 
+producte += '<div id="fitxa" >'; 
+producte += '<div id="esquerra" >' ;
+producte += '<img class="foto img-fluid" src="' + v_foto + '" /><br />' ;
+producte += '<img class="barres" src="' + url_codi_barres + '" />' ;
+producte += '</div>'; 
+producte += '<div id ="dreta" >'; 
+producte += '<span class="etiqueta" > Categoria: </span><span class="dada" >' + v_categoria + '<br ></span>';
+producte += '<span class="etiqueta" > Productor: </span><span class="dada" >' + v_productor + '<br ></span>';
+producte += '<span class="etiqueta" > Preu </span><span class="dada" >' + v_preu + '<br ></span>';
+producte += '<span class="etiqueta" > Stock: </span><span class="dada" >' + v_stock + '<br ></span>';
+producte += '<span class="etiqueta" > <i>Descripció del producte:</i> <br /> </span><span class="dada" >' + v_descri + '<br ></span>'
+
+producte += '</div>' ; 
+producte += '</div>' ; 
+}) ;
+
+$("#llista").html(producte);
+}
+});
+});
+</script>
+</html>

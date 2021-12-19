@@ -1,0 +1,25 @@
+{"productes":
+    [
+    {
+        "codi_barres":"8480002198486",
+        "productor":"LEGO Company",
+        "categoria":"Robòtica educativa",
+        "nom_producte":"LEGO Wedo 2.0",
+        "descri":"Kit de robòtica educativa LEGO WeDo 2.0. A partir de 7 anys.",
+        "preu":199.95,
+        "stock":55,
+        "foto":"https://s3.eu-central-1.amazonaws.com/robotica-es/uploads/items/11635_worlddidac.jpg"
+    },
+    {
+        "codi_barres":"8480002198486",
+        "productor":"LEGO Company",
+        "categoria":"Robòtica educativa",
+        "nom_producte":"LEGO Mindstorms EV3",
+        "descri":"Kit de robòtica educativa LEGO Mindstorms EV3. A partir de 9 anys.",
+        "preu":480.95,
+        "stock":26,
+        "foto":"https://s3.eu-central-1.amazonaws.com/robotica-es/uploads/items/ITEM_4823_FOTOPROD.jpg"
+    }
+    ]
+}
+

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="catalan">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; UTF-8">
+        <META NAME="DC.Language" SCHEME="RFC1766" CONTENT="Catalan">
+        <META NAME="AUTHOR" CONTENT="Toni Fernandez">
+        <META NAME="REPLY-TO" CONTENT="tfernan8@xtec.cat">
+        <LINK REV="made" href="mailto:tfernan8@xtec.cat">
+        <META NAME="description" CONTENT="Portfoli de la tasca realitzada durant el curs XML i llenguatge de marques">
+        <META NAME="KEYWORDS" CONTENT="XML,json,csv,llenguatge de marques,portfoli,DAW,SMX,HTML,metadades,informàtica,CSS,dades obertes,metaetiquetes,tutorial">
+        <META NAME="Resource-type" CONTENT="Document">
+        <META NAME="DateCreated" CONTENT="Wed, 7 July 2021 00:00:00 GMT+1">
+        <META NAME="Revisit-after" CONTENT="1 days">
+        <META NAME="robots" content="ALL">
+        <meta property="og:image" content="img/favicon.png">
+        <meta property="og:description" content="Portfoli de la tasca realitzada durant el curs XML i llenguatge de marques. Realitzat per Toni Fernandez">
+        <meta property="og:title" content="Curs XML i llenguatge de marques">
+        <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css">
+        <link rel="stylesheet" href="css/cookies.css">
+        <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+        <script type="text/javascript" src="js/cookies.js"></script>
+        <title>Curs XML i llenguatge de marques</title>
+      </head>
+  <body>
+    <header>
+      <nav id="navbar">
+        <div class="container">
+          <h1 class="logo"><a href="index.php">Curs XML</a></h1>
+          <ul id="main-nav" class="txt-btn">
+            <li><a class="current" href="index.php">Inici</a></li>
+            <li><a href="contact.html">Contacte</a></li>
+          </ul>
+        </div>
+      </nav>
+  
+      <div id="showcase-home">
+        <div class="showcase-banner">
+          <h1 class="subpage">Jquery i Ajax</h1>
+          <p class="large">Consultes al webservice de receptes</p>
+        </div>
+      </div>
+  
+    </header>
+  
+  <section class="single-project">
+    <div class="container">
+      <div class="box-portfolio">
+        <img src="img/quadre_jqyery.png" alt="quadre portfoli 8">
+        <h4>Mostra de la recepta</h4>
+        <p>Quan s'executa el codi, es mostra un desplegable per triar la fitxa de la recepta</p>
+        <img src="img/recepta_fitxa_consulta.png" alt="Fitxa de la recepta">
+        <p>Quan s'executa el codi en el hosting gratuït de Awarspace no funciona ja que el hosting té restringit el accès a servidors exteriors. 
+            En el següent vídeo es pot veure una demostració del funcionament en un servidor local amb Xampp</p>
+        <iframe width="450" height="253" src="https://www.youtube.com/embed/tsdldoSzn0Q" 
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen></iframe>  
+        <h4>Codi de la consulta</h4>
+        <p>Per fer la consulta al webservice s'han utilitzat 3 documents. </p>
+        <ul>
+            <li><a class="link" href="ajax/fitxa_recepta.xsl">Fitxer XSL</a> que genera el document html</li>
+            <li><a class="link" href="ajax/ajax_receptes.html">Fitxer HTML</a> amb codi Jquery i ajax per seleccionar el id de la recepta</li>
+            <li><a class="link" href="ajax/mostra_recepta.php">Fitxer PHP</a> amb el codi per consultar el webservice</li>
+        </ul>
+      </div>
+
+      <div class="box-portfolio">
+        <h4>Dades Json a través de GAS</h4>   
+        <p>Visualització de dades en format Json de la base de dades de receptes</p>
+        <a class="btn btn-light"
+        href="https://script.google.com/macros/s/AKfycbxFU-J3tYhD97VTIg1oOsl8x7_7ADYkp4UzDfij5qJZFr6f6uCK/exec?accio=json&id=9" target="_blank">Dades Salsa Pesto </a>
+        <a class="btn btn-light"
+        href="https://script.google.com/macros/s/AKfycbxFU-J3tYhD97VTIg1oOsl8x7_7ADYkp4UzDfij5qJZFr6f6uCK/exec?accio=json&id=0" target="_blank">Dades de totes les receptes </a>
+        <br><p></p>
+        <h4>Codi del Script GAS</h4>
+        <p>Aquí pots descarregar el <a class="link" href="js/codi_jqyery.gs">codi del Script GAS</a> que genera les dades Json a partir de la base de dades de receptes del fulls de calcul.</p>
+        <br>
+        <h4>Dades Json a través de SQL</h4>
+        <p>Fent clic als botons s'obtenen les dades en format Json de les BBDD del servidor de minerals i de l'Acb.</p>
+        <a class="btn btn-light"
+        href="php/dades_json_minerals.php" target="_blank">Minerals Json </a>
+        <a class="btn btn-light"
+        href="php/dades_json_acb.php" target="_blank">Jugadors ACB Json </a>
+        <br> <br> 
+        <h4><br> Webservice Json del temps accessible amb php </h4>
+        <p>En local funciona correctament, mentre que en el hsoting, l'api https://api.jsonbin.io/g/ no retorna res. </p>
+        <p>Tot i això s'ha incorporat a la pàgina web. Es pot veure el codi en el següent <a class="link" href="php/meteo.php" target="_blank">enllaç</a> </p>
+        <p>L'Api https://api.jsonbin.io/g/ retorna el camp ciutat buit, així que s'ha escrit mijançant codi.</p>
+        <img src="img/webservice_temps.png" alt="Web service del temps">
+        <h4><br> Format KML i visualització de mapes</h4>
+        <p>S'ha pujat la base de dades <a href="kml/pavellons.sql" class="link">pavellons.sql</a> al servidor amb la informació sobre la localització
+          dels pavellons dels equips de bàsquet de l'ACB. A través del següent enllaç es pot vislualtizar les dades en
+          <a class="link" href="kml/pavellons.php" target_blank>format Kml</a>. Per validar que les dades estiguin ben formatades
+          s'ha utlitzat <a class="link" href="https://validator.w3.org/" target="_blank">Markup Validations Service</a> de W3C.</p>
+        <p>  Per fer la visualització s'ha utilitzar el següent <a class="link" href="https://drive.google.com/file/d/1ykUCjoxorP6NjzXnpijotu8k8ZAfQkWt/view?usp=sharing" target="_blank">codi php</a></p>
+          <img src="img/pabellons.png" alt="XML de pabellons acb">
+          <p>A través del <a class="link" href="https://drive.google.com/file/d/15fQojU23fnghp2wmSyKPuL-K60KR6qBg/view?usp=sharing" target="_blank">següent codi</a>, 
+          s'ha creat el mapa de visualització amb les ubicacions del pavellons. <br> </p>
+          <a class="btn btn-light"
+          href="http://testxml.atwebpages.com/mapa_pabellons.php" target="_blank">Visualització del mapa </a>
+      </div>
+    </div>
+      <div class="single-project-btn">
+        <div class="container">
+          <div class="hr-small"></div>
+          <div class="prev">
+            <a href="portfolio-8.html" class="btn btn-light">Anterior</a>
+          </div>
+          
+          <div class="next">
+            <a href="portfolio-10.html" class="btn btn-light">Següent</a>
+          </div>
+          
+          <div class="hr-small-2"></div>
+        </div>
+      </div>
+  </section>
+
+  <hr>
+
+  <footer id="main-footer">
+    <div class="container">
+      <p class="small">Toni Fernandez 2021 &copy;</p>
+      <!-- <div class="social"> -->
+        <ul>
+          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+      <!-- </div> -->
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="catalan">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; UTF-8">
+        <META NAME="DC.Language" SCHEME="RFC1766" CONTENT="Catalan">
+        <META NAME="AUTHOR" CONTENT="Toni Fernandez">
+        <META NAME="REPLY-TO" CONTENT="tfernan8@xtec.cat">
+        <LINK REV="made" href="mailto:tfernan8@xtec.cat">
+        <META NAME="description" CONTENT="Portfoli de la tasca realitzada durant el curs XML i llenguatge de marques">
+        <META NAME="KEYWORDS" CONTENT="XML,json,csv,llenguatge de marques,portfoli,DAW,SMX,HTML,metadades,informàtica,CSS,dades obertes,metaetiquetes,tutorial">
+        <META NAME="Resource-type" CONTENT="Document">
+        <META NAME="DateCreated" CONTENT="Wed, 7 July 2021 00:00:00 GMT+1">
+        <META NAME="Revisit-after" CONTENT="1 days">
+        <META NAME="robots" content="ALL">
+        <meta property="og:image" content="img/favicon.png">
+        <meta property="og:description" content="Portfoli de la tasca realitzada durant el curs XML i llenguatge de marques. Realitzat per Toni Fernandez">
+        <meta property="og:title" content="Curs XML i llenguatge de marques">
+        <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css">
+        <link rel="stylesheet" href="css/cookies.css">
+        <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+        <script type="text/javascript" src="js/cookies.js"></script>
+        <title>Curs XML i llenguatge de marques</title>
+      </head>
+  <body>
+    <header>
+      <nav id="navbar">
+        <div class="container">
+          <h1 class="logo"><a href="index.php">Curs XML</a></h1>
+          <ul id="main-nav" class="txt-btn">
+            <li><a class="current" href="index.php">Inici</a></li>
+            <li><a href="contact.html">Contacte</a></li>
+          </ul>
+        </div>
+      </nav>
+  
+      <div id="showcase-home">
+        <div class="showcase-banner">
+          <h1 class="subpage">Telegram & Json</h1>
+          <p class="large">Bot de Telegram</p>
+        </div>
+      </div>
+  
+    </header>
+  
+  <section class="single-project">
+    <div class="container">
+      <div class="box-portfolio">
+        <img src="img/quadre_teelgram.png" alt="quadre portfoli 8">
+        <h4>Bot de Telegram</h4>
+        <p>A través del següent vídeo es pot veure una demostració del Bot de Telegram a partir de la plantilla del curs</p>
+        <br>
+        <iframe width="450" height="253" src="https://www.youtube.com/embed/Wj4_fDlzHAY" 
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen></iframe>
+       
+       
+
+      </div>
+      <div class="box-portfolio">
+        <h4>Codi del bot</h4>
+        <p>En el següent quadre es pot veure el codi del Bot i fent clic al botó es pot descarregar </p>
+        <br>
+        <a class="btn btn-light"
+        href="https://script.google.com/d/1yel8I7xMiDJuW-EAHCMa0AOxWwwU-OCNCc5cJn_yRvzV69Iq_-f3qnP9/edit?usp=sharing" target="_blank">Baixa Codi del Bot </a>
+         <!-- Text area 1-->       
+        <br>
+        <textarea id="codihtml" name="codihtml" rows="55" cols="65">
+/* Primer codi receptes 
+Aquest codi es pot considerar una plantilla basica per crear el primer xatbot 
+Els passos a seguir serien : 
+
+1.- Registrar el xatbot a BotFather de telegram . Podeu aprofitar i configurar amb les 3 comandes que teniu programades info,random i me . 
+2.- Crear un document Google Apps Script o un Full de Calcul al Drive 
+3.- Obrir l'espai de codi i enganxar aquest codi que teniu aquí 
+4.- Personalitzeu variables inicials token i ssId si feu servir full de càlcul 
+Posteriorment una vegada 
+5.- Publiqueu aquest codi i obtindreu la url de la vostra applicació que podeu omplir a la variable webAppUrl 
+6.- Registreu la vostra url a telegram fent servir la sintaxi : 
+https://api.telegram.org/botAPI_KEY/setWebhook?url=url_WebAppUrl  i enganxat aquesta url aun navegador 
+7.- Finalment si tot ha anat bé ja ens donara un missatge "setWenhook has set " i ja tindreu operatiu el vostre xatbot 
+
+
+*/ 
+
+
+var token = "1890663438:AAGcKaOe7ITzeSd9I3ezwXXtCExZRmrmP2U";  // Api token del vostre bot que obtindreu al BotFather 
+var telegramUrl = "https://api.telegram.org/bot" + token;
+var webAppUrl = "https://script.google.com/macros/s/AKfycbz2jo06HNvPaz0u0Nm_URHu4YdSV1UHk_2084OKON_ntI4Zo3o/exec";  // Url de l'escript de Google 
+var ssId = "1TLDu60k3uAn3gUIhtDxxAGF6wceztPnRaQhjRsMaJYA";  // Id del full de càlcul que esteui treballant 
+var ID_canal = ""; 
+var id_grup = ""; 
+var folderId = "";
+
+
+//https://api.telegram.org/bot1890663438:AAGcKaOe7ITzeSd9I3ezwXXtCExZRmrmP2U/setWebhook?url=https://script.google.com/macros/s/AKfycbz2jo06HNvPaz0u0Nm_URHu4YdSV1UHk_2084OKON_ntI4Zo3o/exec
+
+// Funcions per enviar a Telegram 
+
+function sendPhoto(id,foto,caption)
+{
+var url = telegramUrl + "/sendPhoto?chat_id=" + id + "&photo=" + foto+"&caption=" + caption ;
+    
+    var response = UrlFetchApp.fetch(url);
+    Logger.log(response.getContentText());
+}
+
+function sendText(chatId,text,keyBoard){
+    keyBoard = keyBoard || 0;
+
+    
+    if(keyBoard.inline_keyboard || keyBoard.keyboard){
+        var data = {
+        method: "post",
+        payload: {
+            method: "sendMessage",
+            chat_id: String(chatId),
+            text: text,
+            parse_mode: "HTML",
+            reply_markup: JSON.stringify(keyBoard)
+        }
+        }
+    }else{
+        var data = {
+        method: "post",
+        payload: {
+            method: "sendMessage",
+            chat_id: String(chatId),
+            text: text,
+            parse_mode: "HTML"
+        }
+        }
+    }
+
+    UrlFetchApp.fetch( telegramUrl + '/', data);
+
+    }
+
+/* Codis HTML permessos per Telegram 
+
+<b> negreta </b>, <strong> negreta </strong>
+<i> cursiva </i>, <em> cursiva </em>
+<u> subratllar </u>, <ins> subratllar </ins>
+<s> strikethrough </s>, <strike> strikethrough </strike>, <del> strikethrough </del>
+<b> negreta <i> cursiva negreta <s> cursiva en negreta en cursiva </s> <u> subratlla en negreta en cursiva </u> </i> negreta </b>
+<a href="http://www.example.com/"> URL en línia </a>
+<a href="tg://user?id=123456789"> esment en línia d'un usuari </a>
+<code> codi d'amplada fixa en línia </code>
+<pre> Bloc de codi de l'amplada fixa preformatat </pre>
+<pre> <code class = "language-python"> bloc de codi preformatat d’amplada fixa escrit en el llenguatge de programació de Python </code> </pre>
+
+*/
+
+
+function sendDocument(id,fitxer)
+{
+var url = telegramUrl + "/sendDocument?chat_id=" + id + "&document=" + fitxer;
+var response = UrlFetchApp.fetch(url);
+Logger.log(response.getContentText());
+}
+
+function sendVideo(id,fitxer)
+{
+var url = telegramUrl + "/sendVideo?chat_id=" + id + "&video=" + fitxer;
+var response = UrlFetchApp.fetch(url);
+Logger.log(response.getContentText());
+}
+
+function sendLocation(id,lat,long)
+{
+var url = telegramUrl + "/sendlocation?chat_id=" + id + "&latitude=" + lat + "&longitude=" + long ;
+var response = UrlFetchApp.fetch(url);
+Logger.log(response.getContentText());
+}
+
+
+function sendDocument2(chatId,id,caption){
+
+    var fileId = id ;
+    var img = DriveApp.getFileById(id);  
+    var blob2 = img.getBlob().getAs("text/plain");
+    
+
+    var payload = {
+            method: "sendDocument",
+            chat_id: String(chatId),
+            photo: blob2,
+            caption : caption,
+            parse_mode: "HTML"
+            //disable_web_page_preview: true,
+    };
+    
+    var options = {
+    method: "POST",
+    payload: payload,
+    muteHttpExceptions : true
+    };
+        
+    var request = UrlFetchApp.fetch( telegramUrl + '/', options);
+    Logger.log(request.getContentText());
+    }
+
+
+
+function deleteMessage(id,id_missatge)
+{
+var url = telegramUrl + "/deleteMessage?chat_id=" + id + "&message_id=" + id_missatge;
+var response = UrlFetchApp.fetch(url);
+Logger.log(response.getContentText());
+}
+
+
+function getFile(file_id) {
+    var url = telegramUrl + "/getFile?file_id=A...EC";
+    var response = UrlFetchApp.fetch(url);
+    Logger.log(response.getContentText());
+}
+
+
+function sendText3(id,text)
+{
+//var url = telegramUrl + "/sendMessage?chat_id=" + id + "&text=" +text +"&parse_mode=html" ;
+    url = telegramUrl + "/sendMessage?chat_id=" + id + "&text=" +text ;
+var response = UrlFetchApp.fetch(url);
+Logger.log(response.getContentText());
+}
+
+function sendPhoto3(chatId,blob2,caption){
+
+    var payload = {
+            method: "sendPhoto",
+            chat_id: String(chatId),
+            photo: blob2,
+            caption : caption,
+            parse_mode: "HTML"
+    
+            //disable_web_page_preview: true,
+    };
+    
+    var options = {
+    method: "POST",
+    payload: payload,
+    muteHttpExceptions : true
+    };
+        
+    var request = UrlFetchApp.fetch( telegramUrl + '/', options);
+    Logger.log(request.getContentText());
+    }
+
+
+function downloadFile(fileURL,folder) {
+    
+    var fileName = "";
+    var fileSize = 0;
+    
+    var response = UrlFetchApp.fetch(fileURL, {muteHttpExceptions: true});
+    var rc = response.getResponseCode();
+    
+    if (rc == 200) {
+    var fileBlob = response.getBlob()
+    var folder = DocsList.getFolder(folder);
+    if (folder != null) {
+        var file = folder.createFile(fileBlob);
+        fileName = file.getName();
+        fileSize = file.getSize();
+    }
+    }
+    
+    sendText(id,"Gravat");
+}
+
+
+// Fi de funcionsde Telegram 
+
+function doPost(e) {
+    
+    var data = JSON.parse(e.postData.contents); // Assigna les dades pasades per Telegram en format JSON a una variable data 
+
+MailApp.sendEmail('tfernan8@xtec.cat', "Dades Bot Telegram" ,JSON.stringify(data,null,4) ) ;   
+//Logger.log(data)  ; 
+
+
+if(data.message)  // En cas de que no fem servir callback 
+{
+    
+var text = data.message.text;  // Recupera el text del missatge 
+var id = data.message.chat.id;  // Recupera el id de la finestra d'on procedeix el missatge 
+var id_usuari = data.message.from.id; // Recupera el id de l'usuari que ha escrit el missatge 
+var id_missatge = data.message.message_id; // Recupera el id del missatge
+var update_id =   data.update_id; // Recupera el id del missatge final 
+var lang = data.message.from.language_code ;  // Recupera l'idioma que te el Telegram de l'usuari que ha enviat el missatge 
+var nom = data.message.from.first_name ;  // Recupera tot el nom de l'usuari que ha enviat el missatge 
+var location = data.message.location; 
+
+}
+    
+if(data.callback_query)
+    {
+    var id_usuari = data.callback_query.from.id; 
+    var id = data.callback_query.message.chat.id;   
+    var id_missatge = data.callback_query.message.message_id; // Recupera el id del missatge
+    var text = data.callback_query.data;
+    var usuari =  data.callback_query.from.user_name; 
+    var nom =  data.callback_query.from.first_name; 
+    var lang =  data.callback_query.from.language_code; 
+    }  
+    
+
+
+
+
+var idioma = lang ;  // Si no retorna idioma li assigna el català 
+
+var enviat = false; 
+    
+
+    
+var entrada = text.split('@');  // Separa les paraules entrades en una matriu/array per tenir per una banda la comanda i d'altre els valors 
+var comanda = entrada[0]; //La comanda serà la primera paraula. Es comença a comptar per zero
+
+var comanda0 = comanda.split(' '); // Separa la comanda dels parametres que porti la comanda 
+var comanda = comanda0[0];      // La comanda quedara a la esquerra serà la posició 0 d ela llista
+var parametre = comanda0[1]; //El parametre ve després de la comanda
+//MailApp.sendEmail('tfernan8@xtec.cat', "Var comanda" ,'variable comanda0 ' + comanda0 + 'var parametre ' + parametre ) ;
+    
+    
+switch(comanda) 
+        {
+        case '/start'  :   // Fabrica el missatge de benvinguda en l'idioma del Telegram de l'usuari 
+                var resposta = 'Benvingut/Benvinguda al xatbot '; 
+        break;
+            
+        case '/agenda'  : 
+                sendText(id_usuari," Avui tens una videoconferencia a les 17h "); 
+                var enviat = true; 
+                break; 
+                
+        case '/info':  {
+                var enviat = info(id_usuari,idioma); }
+        break;  
+        
+        case '/llistat':          
+                var enviat = llistat(id_usuari,idioma); 
+        break;  
+        
+        case '/random':  
+                var enviat = aleatori(id_usuari,idioma); 
+        break;  
+            
+        case '/fotos' : 
+            var resposta = "No disponible"; 
+            break; 
+            
+        case  '/idioma' : 
+            var enviat = menu_idioma(id_usuari,idioma) ; 
+            break; 
+        
+        case  '/menu' : 
+            var enviat = menu_receptes(id_usuari,idioma) ; 
+        break;
+            
+        case '/recepta':
+            var enviat = mostra_recepta(id_usuari,text,idioma);
+        break;
+                                
+        case  '/idi' : 
+            var enviat = canvia_idioma(id_usuari,text,idioma) ; 
+        break; 
+            
+        default   :
+            var resposta = "No entenc el que em demanes:" + text  ;
+                break;
+    }
+
+    if(enviat != true) sendText(id,resposta);  // Envia la resposta 
+
+}
+
+
+function info(id,idioma)
+{
+//sendText(id,"Escriu el nou idioma per pantalla " +idioma); 
+    
+var frase = " Aquest Xatbot   te com objectiu ajudar-te en el desenvolupament del teu projecte  " + 
+                "Pots accedir a les comandes del xatbot clicant sobre la '/' i escollint l'opció desitjada \n\n "+ 
+                "Les comandes que pots activar directament son:  \n\n" +  
+                "/info -  Informació sobr eles Jornades \n"+ 
+                "/llistat - Llistat   \n "+
+                "/random - Al.leatòri\n"+ 
+                "/fotos - Photos \n " + 
+                "/idioma - Selecciona l'idioma de comunicació del xatot \n " +
+                "/menu - mostra botons amb les receptes \n";
+                
+    
+
+    sendText(id,escriu_frase(frase,idioma));   
+    
+    return true; 
+        
+}
+
+
+function escriu_frase(frase,idioma)
+{
+
+    if(idioma.length ==2 && idioma !="ca") var frase= LanguageApp.translate(frase, 'ca', idioma); // Si els dos idiomes coincideixen dona error, per això excluim fer traducció si l'idioma de l'usuari és el catalè 
+    
+    return frase ; 
+    
+}
+
+function menu_receptes(id,idioma)
+{
+    
+    var sh = SpreadsheetApp.openById(ssId).getSheetByName("Receptes"); 
+    var dades = sh.getDataRange().getValues();  
+    
+    
+    var info_receptes = new Array();
+    //var botons_receptes = new Array();
+    
+    for(i in dades)
+    {
+    var row = dades[i];
+    var titol = row[5]; 
+    var fila = i;
+    info_receptes.push([titol,fila]);
+    }
+
+
+    
+
+    
+    var llista = new Array(
+    [{"text": escriu_frase(info_receptes[1][0],idioma), "callback_data": "/recepta 1"},
+    {'text': escriu_frase(info_receptes[2][0],idioma), "callback_data" :"/recepta 2"},
+    {"text": escriu_frase(info_receptes[3][0],idioma),"callback_data" : "/recepta 3"}],
+    [{"text": escriu_frase(info_receptes[4][0],idioma),"callback_data" : "/recepta 4"},
+    {"text": escriu_frase(info_receptes[5][0],idioma),"callback_data" : "/recepta 5"},
+    {"text": escriu_frase(info_receptes[6][0],idioma),"callback_data" : "/recepta 6"}],
+    [{"text": escriu_frase(info_receptes[7][0],idioma), "callback_data" : "/recepta 7"},
+    {"text": escriu_frase(info_receptes[8][0],idioma),"callback_data" : "/recepta 8"},
+    {"text": escriu_frase(info_receptes[9][0],idioma),"callback_data" :"/recepta 9"}],
+    [{"text": escriu_frase(info_receptes[10][0],idioma),"callback_data" : "/recepta 10"},
+    {"text": escriu_frase(info_receptes[11][0],idioma),"callback_data" : "/recepta 11"},
+    {"text": escriu_frase(info_receptes[12][0],idioma),"callback_data" : "/recepta 12"}],
+    [{"text": escriu_frase(info_receptes[13][0],idioma),"callback_data" : "/recepta 13"},
+    {"text": escriu_frase(info_receptes[14][0],idioma),"callback_data" : "/recepta 14"},
+    {"text": escriu_frase(info_receptes[15][0],idioma),"callback_data" : "/recepta 15"}]) ; 
+    
+    var tecles =  { inline_keyboard: llista    , resize_keyboard: true,one_time_keyboard : true  }; 
+    
+    sendText(id,escriu_frase("Selecciona recepta",idioma),tecles );  
+
+    return true; 
+}
+function menu_idioma(id,idioma)
+{
+    
+    var llista = new Array(
+    [{"text": escriu_frase("Castellà",idioma), "callback_data": "/idi es"},
+    {'text': escriu_frase("Català",idioma), "callback_data" : "/idi ca"},
+    {"text": escriu_frase("Basc",idioma),"callback_data" : "/idi eu"}],
+    [{"text": escriu_frase("Anglès",idioma),"callback_data" : "/idi en"},
+    {"text": escriu_frase("Francés",idioma),"callback_data" : "/idi fr"},
+    {"text": "Gallego","callback_data" : "/idi gl"}],
+    [{"text": escriu_frase("Àrab",idioma), "callback_data" : "/idi ar"},
+    {"text": "Tancar","callback_data" : "/tancar"}]) ; 
+    
+    var tecles =  { inline_keyboard: llista    , resize_keyboard: true,one_time_keyboard : true  }; 
+    
+    sendText(id,escriu_frase("Selecciona idioma",idioma),tecles );  
+
+    return true; 
+    
+}
+
+
+function registre(id_usuari,nom,text,lang)
+{
+
+var sh = SpreadsheetApp.openById(ssId).getSheetByName("Usuaris"); 
+var dades = sh.getDataRange().getValues();  
+        
+    for(i in dades)
+    {
+    var row = dades[i];
+    var num_usuari = row[1];
+
+        if(num_usuari == id_usuari) 
+    {
+
+        sh.getRange(+i+1,1).setValue(new Date()); 
+        sh.getRange(+i+1,5).setValue(text);            
+        
+        return row[3]; 
+        
+    }
+    }
+    
+    SpreadsheetApp.openById(ssId).getSheetByName("Usuaris").appendRow([new Date(),id_usuari,nom,lang,text]);  
+    return lang ; 
+    
+    }
+    
+    
+
+
+function canvia_idioma(id_usuari,text,idioma) 
+{
+    
+    var sh = SpreadsheetApp.openById(ssId).getSheetByName("Usuaris"); 
+    var dades = sh.getDataRange().getValues();  
+    
+    
+    var entrada = text.split(' ');  // Separa les paraules entrades en una matriu/array per tenir per una banda la comanda i d'altre els valors 
+    var idioma = entrada[1]; 
+    
+    var trobat = 0;
+    
+        
+    for(i in dades)
+    {
+    var row = dades[i];
+    var num_usuari = row[1];
+    var lang = row[3]; 
+    if(num_usuari == id_usuari) 
+    {
+        var posicio= +i+1; 
+        sh.getRange(posicio,4).setValue(idioma); 
+        sendText(id_usuari,escriu_frase("El nou idioma ara és : "+ idioma,idioma) ); 
+    }
+}
+    
+    return true; 
+    
+}
+
+function mostra_recepta(id_usuari,text,idioma)
+{
+    var sh = SpreadsheetApp.openById(ssId).getSheetByName("Receptes"); 
+    var dades = sh.getDataRange().getValues();
+    
+    var entrada = text.split(' ');  // Separa les paraules entrades en una matriu/array per tenir per una banda la comanda i d'altre els valors 
+    var fila_recepta = entrada[1];
+    
+    //sendText(id_usuari,"S'ha clicat a la reccpte " + fila_recepta);
+    var posicio = fila_recepta;  
+
+var fitxa = ""; 
+
+    var row = dades[posicio]; 
+    var titol = row[5]; 
+    var Foto_recepta = row[8];
+    var url_foto = "https://drive.google.com/uc?export=view&id=";
+    var getId = Foto_recepta.toString().split("=");
+    var url_foto = url_foto + getId[1];
+    var ingredients = row[13]; 
+    var preparacio = row[14]; 
+    
+    var fitxa = fitxa + titol + "\n <b> Ingredients</b> \n"+ ingredients+"\n <b> Preparació </b>\n" + preparacio ;  
+    sendPhoto3(id_usuari,url_foto,escriu_frase(fitxa,idioma)); 
+    
+    return true;
+    
+}
+
+function llistat(id_usuari,idioma)
+{
+var sh = SpreadsheetApp.openById(ssId).getSheetByName("Receptes"); 
+var dades = sh.getDataRange().getValues();  
+    
+var llistat = "";   
+    for(i in dades)
+    {
+    var row = dades[i];
+    var titol = row[5]; 
+    var frase = frase + i +") "+ titol + "\n"; 
+    }
+    
+    sendText(id_usuari,escriu_frase(frase,idioma)); 
+    return true; 
+    
+    }
+    
+
+function aleatori(id_usuari,idioma)
+{
+var sh = SpreadsheetApp.openById(ssId).getSheetByName("Receptes"); 
+var dades = sh.getDataRange().getValues();  
+var ultim = sh.getLastRow(); 
+
+var posicio = Math.floor(Math.random() * ultim) +1 ;  
+
+var fitxa = ""; 
+
+    var row = dades[posicio]; 
+    var titol = row[5]; 
+    var Foto_recepta = row[8];
+    var url_foto = "https://drive.google.com/uc?export=view&id=";
+    var getId = Foto_recepta.toString().split("=");
+    var url_foto = url_foto + getId[1];
+    var ingredients = row[13]; 
+    var preparacio = row[14]; 
+    
+    var fitxa = fitxa + titol + "\n <b> Ingredients</b> \n"+ ingredients+"\n <b> Preparació </b>\n" + preparacio ;  
+    sendPhoto3(id_usuari,url_foto,escriu_frase(fitxa,idioma)); 
+    
+    
+    return true; 
+    }
+               
+            
+            
+            
+            
+            
+            
+         
+        </textarea>
+<!-- Fi de Text area 1-->            
+        
+        
+      </div>
+    </div>
+      <div class="single-project-btn">
+        <div class="container">
+          <div class="hr-small"></div>
+          <div class="prev">
+            <a href="portfolio-9.html" class="btn btn-light">Anterior</a>
+          </div>
+          <div class="next">
+            <a href="portfolio-11.html" class="btn btn-light">Següent</a>
+          </div>
+          <div class="hr-small-2"></div>
+        </div>
+      </div>
+  </section>
+
+  <hr>
+
+  <footer id="main-footer">
+    <div class="container">
+      <p class="small">Toni Fernandez 2021 &copy;</p>
+      <!-- <div class="social"> -->
+        <ul>
+          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+      <!-- </div> -->
+    </div>
+  </footer>
+
+</body>
+</html>

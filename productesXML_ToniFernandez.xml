@@ -1,0 +1,25 @@
+<xml>
+    <producte>
+        <codi_barres>8480002198486</codi_barres>
+        <productor>LEGO Company</productor>
+        <categoria>Robòtica educativa</categoria>
+        <nom_producte>LEGO Wedo 2.0</nom_producte>
+        <descri>Kit de robòtica educativa LEGO WeDo 2.0. A partir de 7 anys.</descri>
+        <preu>199.95</preu>
+        <stock>55</stock>
+        <foto>https://s3.eu-central-1.amazonaws.com/robotica-es/uploads/items/11635_worlddidac.jpg</foto>
+    </producte>
+
+    <producte>
+        <codi_barres>8480002198486</codi_barres>
+        <productor>LEGO Company</productor>
+        <categoria>Robòtica educativa</categoria>
+        <nom_producte>LEGO Mindstorms EV3</nom_producte>
+        <descri>Kit de robòtica educativa LEGO Mindstorms EV3. A partir de 9 anys.</descri>
+        <preu>480.95</preu>
+        <stock>26</stock>
+        <foto>https://s3.eu-central-1.amazonaws.com/robotica-es/uploads/items/ITEM_4823_FOTOPROD.jpg</foto>
+    </producte>
+
+
+</xml>

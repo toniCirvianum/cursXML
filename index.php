@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="catalan">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; UTF-8">
+    <META NAME="DC.Language" SCHEME="RFC1766" CONTENT="Catalan">
+    <META NAME="AUTHOR" CONTENT="Toni Fernandez">
+    <META NAME="REPLY-TO" CONTENT="tfernan8@xtec.cat">
+    <LINK REV="made" href="mailto:tfernan8@xtec.cat">
+    <META NAME="description" CONTENT="Portfoli de la tasca realitzada durant el curs XML i llenguatge de marques">
+    <META NAME="KEYWORDS" CONTENT="XML,json,csv,llenguatge de marques,portfoli,DAW,SMX,HTML,metadades,informàtica,CSS,dades obertes,etiquetes,tutorial,unitat,curs,gratis,free,online">
+    <META NAME="Resource-type" CONTENT="Document">
+    <META NAME="DateCreated" CONTENT="Wed, 7 July 2021 00:00:00 GMT+1">
+    <META NAME="Revisit-after" CONTENT="1 days">
+    <META NAME="robots" content="ALL">
+    <meta property="og:image" content="img/favicon.png">
+    <meta property="og:description" content="Portfoli de la tasca realitzada durant el curs XML i llenguatge de marques. Realitzat per Toni Fernandez">
+    <meta property="og:title" content="Curs XML i llenguatge de marques">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css">
+    <link rel="stylesheet" href="css/cookies.css">
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="js/cookies.js"></script>
+    <title>Curs XML i llenguatge de marques</title>
+</head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EMNJGCHVPJ"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-EMNJGCHVPJ');
+</script>
+<!-- Fi del Goole site tag -->
+
+<body>
+
+    <header>
+        <nav id="navbar">
+            <div class="container">
+                <h1 class="logo"><a href="index.html">Curs XML</a></h1>
+                <ul id="main-nav" class="txt-btn">
+                    <li><a class="current" href="index.html">Inici</a></li>
+                    <li><a href="contact.html">Contacte</a></li>
+                </ul>
+
+            </div>
+        </nav>
+
+        <div id="showcase-home">
+            <div class="showcase-banner">
+                <h1 class="subpage">Curs XML</h1>
+                <p class="large">Llenguatge de marques i serveis web</p>
+                <div class="panel" id="meteo">
+                    <!--<//?php nclude "php/meteo.php"; ?> -->
+                </div>
+
+
+            </div>
+        </div>
+
+    </header>
+    <!-- Codi Acceptació cookies -->
+    <div id="cajacookies">
+        <p>
+            Aquest lloc web fa servir cookies, si continua navegant significa que accepta el seu ús.
+            Pot llegir més sobre l'ús de cookies a la nostra <a href="cookies.html">política de cookies i de privacitat</a>.
+            <button onclick="aceptarCookies()" class="pull-right"><i class="fa fa-times"></i> Aceptar y tancar aquest missatge</button>
+        </p>
+    </div>
+    <!-- Fi Codi  cookies -->
+
+
+
+
+    <section id="portfolio">
+        <div class="container">
+            <div class="portfolio-nav">
+                <ul class="txt-btn">
+                    <li><a href="https://docs.google.com/document/d/1DLjAZnMrYR42OhyeNJrTR7a1Xs-xFtwQg5eJjijkaD4/edit?usp=sharing" target="_blank">Unitat 0</a></li>
+                    <li><a href="https://docs.google.com/document/d/1VPgzRZbnSgCfrnljoEHq5k8UFAchthWKdGZxbu-7fk4/edit?usp=sharing" target="_blank">Unitat 1</a></li>
+                    <li><a href="#">Unitat 2</a></li>
+                    <li><a href="https://docs.google.com/document/d/1YwTVxV222rOsZ4r4ijp6FQOXpgBDCFTtfV-htt-H7tA/edit?usp=sharing">Unitat 3</a></li>
+                    <li><a href="#">Unitat 4</a></li>
+                </ul>
+
+            </div>
+            <div class="portfolio-content">
+                <div class="box">
+                    <a href="portfolio-1.html">
+                        <img src="img/jsfidlle.png" alt="quadre portfoli 1">
+                    </a>
+                </div>
+                <div class="box">
+                    <a href="portfolio-2.html">
+                        <img src="img/quadre_drive.png" alt="quadre portfoli 2">
+                    </a>
+                </div>
+                <div class="box">
+                    <a href="portfolio-3.html">
+                        <img src="img/quadre_bd_col.png" alt="quadre portfoli 3">
+                    </a>
+                </div>
+            </div>
+            <div class="portfolio-content">
+                <div class="box">
+                    <a href="portfolio-4.html">
+                        <img src="img/quadre_colage.png" alt="quadre portfoli 4">
+                    </a>
+                </div>
+                <div class="box">
+                    <a href="portfolio-5.html">
+                        <img src="img/quadre_ckan.jpg" alt="quadre portfoli 5">
+                    </a>
+                </div>
+                <div class="box">
+                    <a href="portfolio-6.html">
+                        <img src="img/quadre_xml.png" alt="quadre portfoli 6">
+                    </a>
+                </div>
+            </div>
+            <div class="portfolio-content">
+                <div class="box">
+                    <a href="portfolio-7.html">
+                        <img src="img/quadre_SEO.png" alt="quadre portfoli 7">
+                    </a>
+                </div>
+
+                <div class="box">
+                    <a href="portfolio-8.html">
+                        <img src="img/quadre_responsive.png" alt="quadre portfoli 8">
+                    </a>
+                </div>
+                <div class="box">
+                    <a href="portfolio-9.html">
+                        <img src="img/quadre_jqyery.png" alt="quadre portfoli 9">
+                    </a>
+                </div>
+            </div>
+            <div class="portfolio-content">
+                <div class="box">
+                    <a href="portfolio-10.html">
+                        <img src="img/quadre_teelgram.png" alt="quadre portfoli 10">
+                    </a>
+                </div>
+
+                <div class="box">
+                    <a href="portfolio-11.html">
+                        <img src="img/quadre_rss.png" alt="quadre portfoli 11">
+                    </a>
+                </div>
+                <div class="box">
+                    <a href="portfolio-12.html">
+                        <img src="img/quadreRssPropi.png" alt="quadre portfoli 12">
+                    </a>
+                </div>
+            </div>
+            <div class="portfolio-content">
+                <div class="box">
+                    <a href="portfolio-13.html">
+                        <img src="img/quadre_svg.png" alt="quadre portfoli 13">
+                    </a>
+                </div>
+
+                <div class="box">
+                    <a href="portfolio-14.html">
+                        <img src="img/quadre_primerwebservice.png" alt="quadre portfoli 14">
+                    </a>
+                </div>
+                <div class="box">
+                    <a href="portfolio-15.html">
+                        <img src="img/quadre_appInventor.png" alt="quadre portfoli 15">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <footer id="main-footer">
+        <div class="container">
+            <p class="small">Toni Fernandez 2021 &copy;</p>
+            <!-- <div class="social"> -->
+            <ul>
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+            <!-- </div> -->
+        </div>
+    </footer>
+
+</body>
+
+</html>
